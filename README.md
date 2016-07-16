@@ -9,11 +9,11 @@ These consists of all projects that I have build over the years
 **[TicTacToe](./C%2B%2B/TicTacToe)**
 
 ## Mobile Projects
-**[MyBuddyMap](./Mobile/\Apps\MyBuddyMap)**
+**[MyBuddyMap](./Mobile%20Apps\MyBuddyMap)**
 
-**[PhysioIT](./Mobile/\Apps\PhysioIT)**
+**[PhysioIT](./Mobile%20Apps\PhysioIT)**
 
-**[SentiApp](./Mobile/\Apps\SentiApp)**
+**[SentiApp](./Mobile%20Apps\SentiApp)**
 
 ## TensorFlow
 **[Hello World](./TensorFlow/HelloWorld.ipynb)**
