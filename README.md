@@ -2,11 +2,11 @@
 These consists of all projects that I have build over the years 
 
 ## C++
-**[Cybrilla_SkyScrapers](.\C++\Cybrilla_SkyScrapers)**
+**[Cybrilla_SkyScrapers](./C%2B%2B/Cybrilla_SkyScrapers/)**
 
-**[Router Configuration Parser](.\C++\RouterConfigurationParser)**
+**[Router Configuration Parser](./C%2B%2B/RouterConfigurationParser)**
 
-**[TicTacToe](.\C++\TicTacToe)**
+**[TicTacToe](./C%2B%2B/TicTacToe)**
 
 ## Mobile Projects
 **[MyBuddyMap](.\Mobile/\Apps\MyBuddyMap)**
