@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_action_search"
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@drawable/ic_menu_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/menu_search"/>
+    <item
+        android:id="@+id/refreshbuddyList"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_refresh">
+    </item>
+    <item
+        android:id="@+id/exportcsv"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_export">
+    </item>
+    <item
+        android:id="@+id/exportAllcsv"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_exportall">
+    </item>
+    <item
+        android:id="@+id/Test"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_graph">
+    </item>
+
+</menu>

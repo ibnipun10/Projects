@@ -1,0 +1,81 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp.FrontEnd.FacebookLogin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:facebookControls="clr-namespace:Facebook.Client.Controls;assembly=Facebook.Client"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:local="clr-namespace:PhoneApp.FrontEnd"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:IndexConverter x:Key="IndexConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Name="applicationTitle" Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
+          </StackPanel>
+       
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock x:Name="textMessage" TextWrapping="Wrap" FontWeight="Bold" FontStyle="Italic" VerticalAlignment="Center" Margin="10,10,10,10" FontSize="24"/>
+           <phone:LongListSelector x:Name="longlistselector" LayoutMode="List"  IsGroupingEnabled="False" >
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate x:Name="datatemplate">
+                        <Border  x:Name="itemsBorder" BorderBrush="AntiqueWhite"  BorderThickness="3" Margin="5">
+                            <Grid Background="#3B5998" Tap="OnMessageTap" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock x:Name="messageIndex" Text="{Binding Converter={StaticResource IndexConverter}}" Visibility="Collapsed"/>
+                        
+                                <TextBlock x:Name="message" Text="{Binding message}" TextWrapping="NoWrap" Grid.Row="0" Height="30" Margin="5,0,5,0" FontWeight="Bold" FontSize="22"/>
+                                <TextBlock x:Name="creatorname" Text="{Binding GetCreatorName}" Grid.Row="1" Margin="10,0,0,0" FontStyle="Italic" FontSize="18"/>
+                                <TextBlock x:Name="createddate" Text="{Binding GetCreatedDate}" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,10,0" FontFamily="Portable User Interface" FontStyle="Italic" FontSize="18"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </Grid>
+        <TextBlock x:Name="ErrorBlock" Margin="5" Visibility="Collapsed" Grid.Row="2" TextWrapping="Wrap" FontSize="18" Foreground="Orange"/>
+        <!--        user information  -->
+        <StackPanel  Grid.Row="3" Orientation="Horizontal"  HorizontalAlignment="Left"  Margin="5">
+            <TextBlock Margin="10,0,0,0"  x:Name="usernameId" HorizontalAlignment="Center"  VerticalAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontSize="22" />
+        </StackPanel>
+
+       
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar >
+        <shell:ApplicationBar x:Name="AppBarName" Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+           <shell:ApplicationBarIconButton  IconUri="/Images/AppBarIcons/NewChat.png" Text="post" x:Name="chatIcon" Click="AddChatButtonClick"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/AppBarIcons/Synchronize.png" Text="refresh" x:Name="refreshIcon" Click="RefreshButtonClick"/>
+            <!-- <shell:ApplicationBarIconButton IconUri="/Images/AppBarIcons/Like.png" Text="Like" x:Name="likeIcon" Click="LikeButtonClick"/> -->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="progressIndicator" IsIndeterminate="true" IsVisible="False" Text="" />
+    </shell:SystemTray.ProgressIndicator>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,34 @@
+package com.UI.mybuddyapp;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class AboutActivity extends Activity {
+
+	private TextView mtxtVersion;
+	private TextView mtxtAbout;
+	private TextView mtxtAuthor;
+	
+	private Button mbtnRate;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_about);
+		
+		InitializeComponents();
+	}
+
+	private void InitializeComponents() {
+		// TODO Auto-generated method stub
+		
+		mtxtVersion = (TextView)findViewById(R.id.idVersion);
+		mtxtAbout = (TextView)findViewById(R.id.idAboutText);
+		mtxtAuthor = (TextView)findViewById(R.id.idAuthor);
+		mbtnRate = (Button)findViewById(R.id.idRateit);
+	}
+
+	
+}

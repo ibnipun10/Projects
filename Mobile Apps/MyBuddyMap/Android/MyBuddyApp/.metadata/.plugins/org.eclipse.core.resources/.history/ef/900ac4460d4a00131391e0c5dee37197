@@ -1,0 +1,78 @@
+package com.UI.mybuddyapp;
+
+import com.UI.Common.Constants;
+import com.UI.Common.Utilities;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class AboutActivity extends Activity {
+
+	private TextView mtxtVersion;
+	private TextView mtxtAbout;
+	private TextView mtxtAuthor;
+
+	private Button mbtnRate;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_about);
+
+		try {
+			InitializeComponents();
+			SetComponentsText();
+		} catch (Exception ex) {
+
+		}
+	}
+
+	private void SetComponentsText() throws NameNotFoundException {
+		// TODO Auto-generated method stub
+		String version = Constants.APP_VERSION + " : "
+				+ Utilities.GetPackageInfo(this).versionName;
+		mtxtVersion.setText(version);
+
+		mtxtAbout.setText(Constants.ABOUT_TEXT);
+		String author = Constants.APP_AUTHOR + " : "
+				+ Constants.APP_AUTHOR_NAME;
+		mtxtAuthor.setText(author);
+
+		mbtnRate.setText(Constants.ABOUT_RATE_BUTTON);
+		mbtnRate.setOnClickListener(new RateButtonListener());
+	}
+
+	private class RateButtonListener implements View.OnClickListener {
+		@Override
+		public void onClick(View view) {
+			Uri uri = Uri.parse("market://details?id="
+					+ view.getContext().getPackageName());
+			Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+			try {
+				startActivity(goToMarket);
+			} catch (ActivityNotFoundException e) {
+
+			}
+		}
+	}
+
+	private void InitializeComponents() {
+		// TODO Auto-generated method stub
+
+		mtxtVersion = (TextView) findViewById(R.id.idVersion);
+		mtxtAbout = (TextView) findViewById(R.id.idAboutText);
+		mtxtAuthor = (TextView) findViewById(R.id.idAuthor);
+		mbtnRate = (Button) findViewById(R.id.idRateit);
+	}
+
+}

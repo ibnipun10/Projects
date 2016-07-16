@@ -1,0 +1,191 @@
+package com.UI.mybuddyapp;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.LinkedList;
+import java.util.List;
+
+import com.UI.Common.CommonFacebookClass;
+import com.UI.Common.Constants;
+import com.UI.Common.FacebookFriend;
+import com.UI.Common.NotificationHelper;
+import com.UI.Common.Utilities;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MapActivity extends Activity implements OnMarkerClickListener, GooglePlayServicesClient.ConnectionCallbacks,
+GooglePlayServicesClient.OnConnectionFailedListener {
+	private NotificationHelper mNotificationHelper;
+	private GoogleMap theMap;
+	private int mMyIcon, mFriendsIcon;
+	private LocationManager mlocMan;
+	private final float ZOOM_TO_LEVEL = 4;
+	private TextView mtxtProgress;
+	private LocationClient mLocationClient;
+
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_map);
+
+		InitializeComponents();
+		CreateThreads();
+	}
+
+	private void InitializeComponents() {
+		// mNotificationHelper = new NotificationHelper(this);
+		// mNotificationHelper.createNotification();
+
+		mLocationClient = new LocationClient(this, this, this);
+		
+		theMap = ((MapFragment) getFragmentManager().findFragmentById(
+				R.id.the_map)).getMap();
+		mMyIcon = R.drawable.red_point;
+		mFriendsIcon = R.drawable.green_point;
+
+		CommonFacebookClass.dictLocation = new Hashtable<String, List<FacebookFriend>>();
+		CommonFacebookClass.queueFriends = new LinkedList<FacebookFriend>();
+		CommonFacebookClass.bDone = false;
+		mtxtProgress = (TextView) this.findViewById(R.id.idNotification);
+
+		theMap.setOnMarkerClickListener(this);
+		SetProgressText(Constants.NOTIFICATION_FB_ANALYSE);
+
+		
+
+	}
+
+	private void CreateThreads() {
+		// TODO Auto-generated method stub
+
+		CommonFacebookClass.m_pfthread = new PopulateFriendsThread();
+		CommonFacebookClass.m_pfthread.start();
+
+		CommonFacebookClass.m_plthread = new PopulateLocationThread(
+				mNotificationHelper, this);
+		CommonFacebookClass.m_plthread.start();
+	}
+
+	public void ShowLocation(double lattitude, double longitude,
+			String placeName) {
+		LatLng position = new LatLng(lattitude, longitude);
+		MarkerOptions place = new MarkerOptions().position(position)
+				.icon(BitmapDescriptorFactory.fromResource(mFriendsIcon))
+				.title(placeName)
+				.snippet(Utilities.GetKey(lattitude, longitude));
+
+		theMap.addMarker(place);
+
+	}
+
+	public void ShowMyLocation() {
+
+		mlocMan = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		if (mlocMan.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+			// get last location
+			Location lastLoc =mLocationClient.getLastLocation();
+			if (lastLoc != null) {
+				double lat = lastLoc.getLatitude();
+				double lng = lastLoc.getLongitude();
+				// create LatLng
+				LatLng position = new LatLng(lat, lng);
+
+				MarkerOptions place = new MarkerOptions().position(position)
+						.icon(BitmapDescriptorFactory.fromResource(mMyIcon))
+						.title("I am Here")
+						.snippet(Constants.MY_LOCATIN_SNIPPET);
+
+				theMap.addMarker(place);
+
+				CameraPosition.Builder cameraPositionBuilder = new CameraPosition.Builder();
+				cameraPositionBuilder.zoom(ZOOM_TO_LEVEL);
+				cameraPositionBuilder.target(position);
+				CameraPosition cameraPostion = cameraPositionBuilder.build();
+
+				theMap.animateCamera(
+						CameraUpdateFactory.newCameraPosition(cameraPostion),
+						3000, null);
+			} else {
+				// Unable to get the last location
+			}
+		} else {
+			// location service is disabled
+		}
+
+	}
+
+	@Override
+	public boolean onMarkerClick(Marker marker) {
+		// TODO Auto-generated method stub
+		if (marker.getSnippet().equals(Constants.MY_LOCATIN_SNIPPET))
+			return false;
+
+		Intent intent = new Intent(MapActivity.this, BuddylistActivity.class);
+		intent.putExtra(Constants.DICTIONARY_KEY, marker.getSnippet());
+
+		startActivity(intent);
+
+		return false;
+	}
+
+	public void SetProgressText(String message) {
+		mtxtProgress.setText(message);
+	}
+
+	public void HideProgressText() {
+		mtxtProgress.setVisibility(View.GONE);
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConnected(Bundle connectionHint) {
+		// TODO Auto-generated method stub
+		ShowMyLocation();
+	}
+
+	@Override
+	public void onDisconnected() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	 @Override
+	    protected void onStart() {
+	        super.onStart();
+	        // Connect the client.
+	        mLocationClient.connect();
+	    }
+	    
+	    /*
+	     * Called when the Activity is no longer visible.
+	     */
+	    @Override
+	    protected void onStop() {
+	        // Disconnecting the client invalidates it.
+	        mLocationClient.disconnect();
+	        super.onStop();
+	    }
+}

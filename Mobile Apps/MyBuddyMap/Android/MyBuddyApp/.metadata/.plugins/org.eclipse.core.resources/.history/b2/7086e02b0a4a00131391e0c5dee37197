@@ -1,0 +1,23 @@
+package com.UI.Common;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.google.android.gms.maps.model.LatLng;
+
+public class Utilities {
+
+	 public static String GetKey(double lattitude, double longitude)
+     {
+		 LatLng latlng = new LatLng(lattitude, longitude);
+         return latlng.latitude + "," + latlng.longitude;
+     }
+	 
+	 public static boolean GetBooleanValueFromPreferences(Context context, String key)
+	    {
+	        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+	        return sharedPref.getBoolean(key, true);
+	    }
+
+}

@@ -1,0 +1,12 @@
+package com.UI.Common;
+
+import com.google.android.gms.maps.model.LatLng;
+
+public class Utilities {
+
+	 public static String GetKey(double lattitude, double longitude)
+     {
+		 LatLng latlng = new LatLng(lattitude, longitude);
+         return latlng.latitude + "," + latlng.longitude;
+     }
+}

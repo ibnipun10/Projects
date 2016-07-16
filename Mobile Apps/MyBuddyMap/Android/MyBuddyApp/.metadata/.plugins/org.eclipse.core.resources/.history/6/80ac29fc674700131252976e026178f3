@@ -1,0 +1,13 @@
+package com.UI.Common;
+
+public class LocationClass {
+
+	public string id;
+
+	public string name;
+
+	public float lattitude;
+
+	public float longitude;
+
+}

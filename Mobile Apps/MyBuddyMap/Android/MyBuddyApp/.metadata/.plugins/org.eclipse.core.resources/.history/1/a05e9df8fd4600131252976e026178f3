@@ -1,0 +1,46 @@
+package com.UI.Common;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.client.protocol.RequestAddCookies;
+
+import com.facebook.FacebookRequestError;
+import com.facebook.Request;
+import com.facebook.RequestAsyncTask;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.model.GraphObject;
+
+public class CommonFacebookClass {
+
+	public static boolean bHomeTown;
+	public static Session session;
+
+	public static void GetAllFriends() {
+		
+			List<String> lfriends = new ArrayList<String>();
+			String strRequest =  "me/friends";
+			
+			Request request = new Request(session, strRequest, null, null, new Request.Callback() {
+                public void onCompleted(Response response) {
+                    GraphObject graphObject = response.getGraphObject();
+                    FacebookRequestError error = response.getError();
+                    
+                    if (graphObject != null) {
+                       
+                   
+                }
+            }});
+			
+			RequestAsyncTask task = new RequestAsyncTask(request);
+			task.execute();
+			
+	}
+
+	public static URL GetFacebookPicURL(String id) throws MalformedURLException {
+		return new URL("https://graph.facebook.com/" + id + "/picture");
+	}
+}

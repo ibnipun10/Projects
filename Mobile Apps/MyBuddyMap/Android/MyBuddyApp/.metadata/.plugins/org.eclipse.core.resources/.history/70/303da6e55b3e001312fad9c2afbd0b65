@@ -1,0 +1,9 @@
+247086835438412247086835438412247086835438412247086835438412<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyBuddyApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="facebookAppId">247086834538412</string>
+
+</resources>

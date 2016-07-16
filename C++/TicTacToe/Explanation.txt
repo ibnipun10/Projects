@@ -1,0 +1,37 @@
+This is how the game is structured
+
+I have implemented only Human - Human fight
+This game can be easily extended to Computer - Human or Computer- Computer fight
+
+
+
+
+Classes Used
+
+CPlayer : Base class
+CHuman and CComputer are 2 derieved classes from base class CPlayer
+CFactoryPlayer will give type of class object using factory pattern
+
+Game Controller
+CController : This is the brain of the game
+It controls the game and is a singleton class.
+
+CBoard Class:
+This class merely print the board on the screen.
+
+
+
+
+
+Logic
+
+Controller has a matrix of 3 x 3 
+This is set to 0 initialilly
+
+Player A when moves will set that cell to 1
+Player B will set the cell to -1
+
+Controller also has an array of Row[3], Col[3], diag1 and diag2
+
+After every move if any of the above arrays value becomes 3 playerA wins and if it becomes -3 player B wins,
+Incase all cells are occupied then the game is drawn.

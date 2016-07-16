@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PysioIT>
+  <Database VersionId = "2">
+    <BodyPartDB>
+       <Part>
+        <PartID>1001</PartID>
+        <Name>Common</Name>
+        <Image>completeBody.jpg</Image>
+        <Message>Common problems n precautions</Message>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <Name>Neck</Name>
+        <Image>Neck.jpg</Image>
+        <Message>My Neck</Message>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <Name>Back</Name>
+        <Image>Lowerback.jpg</Image>
+        <Message>My Lower Back</Message>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <Name>Shoulder</Name>
+        <Image>Shoulder.jpg</Image>
+        <Message>My Shoulder</Message>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <Name>Wrist</Name>
+        <Image>Wrist.jpg</Image>
+        <Message>My Wrist and Palm</Message>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <Name>Feet</Name>
+        <Image>Foot.jpg</Image>
+        <Message>My Feet</Message>
+      </Part>
+    </BodyPartDB>
+    <ReasonsDB>
+      
+      <!--  Common problems and precautions -->
+      <Part>
+        <PartID>1001</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title></Title>
+        <Description>1. Pain</Description>
+        <Image></Image>
+      </Part>
+       <Part>
+        <PartID>1001</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title></Title>
+        <Description>2. Joint stiffness</Description>
+        <Image></Image>
+      </Part>
+         <Part>
+        <PartID>1001</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title></Title>
+        <Description>3. Muscle tightness</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1001</PartID>
+        <ReasonsId>4</ReasonsId>
+        <Title></Title>
+        <Description>4. Muscle spasm</Description>
+        <Image></Image>
+      </Part>
+          <Part>
+        <PartID>1001</PartID>
+        <ReasonsId>5</ReasonsId>
+        <Title></Title>
+        <Description>5. Degenerative diseases like cervical or lumbar spondylosis etc</Description>
+        <Image></Image>
+      </Part>
+      <!-- Neck -->
+      <Part>
+        <PartID>1002</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title>Poor posture</Title>
+        <Description>Poor posture is one which puts body at stress resulting in number of muscular skeletal disorders i.e. problems relating to muscles and bones</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title>Cervical spondylosis</Title>
+        <Description>Cervical spondylosis refers to age-related degenerative changes within the cervical spine(neck region). This may result in pain, stiffness loss of range of motion in neck </Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title>Bone and joint disorders</Title>
+        <Description>Degenerative bone diseases like osteoporosis, osteoarthritis etc which may result in loss of bony strength and may hamper normal cervical motion</Description>
+        <Image></Image>$
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <ReasonsId>4</ReasonsId>
+        <Title>Poor ergonomics</Title>
+        <Description>Ergonomics is science of work which makes working comfortable and efficient.Lack of knowledge regarding usage of work related equipments and poor posture together may reuslt in poor ergonomics and hence reducing efficiency</Description>
+        <Image></Image>
+      </Part>
+
+      <!-- Lower Back-->
+      <Part>
+        <PartID>1003</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title>Poor posture</Title>
+        <Description>Poor posture is one which puts body at stress resulting in number of muscular skeletal disorders i.e. problems relating to muscles and bones</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title>Lumbar spondylosis</Title>
+        <Description>Lumbar spondylosis refers to age-related degenerative changes within the Lumbar spine(back region). This may result in pain, stiffness loss of range of motion in back</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title>Bone and joint disorders</Title>
+        <Description>Degenerative bone diseases like osteoporosis, osteoarthritis etc which may result in loss of bony strength and may hamper normal lumbar motion</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <ReasonsId>4</ReasonsId>
+        <Title>Poor ergonomics</Title>
+        <Description>Ergonomics is science of work which makes working comfortable and efficient.Lack of knowledge regarding usage of work related equipments and poor posture together may reuslt in poor ergonomics and hence reducing efficiency</Description>
+        <Image></Image>
+      </Part>
+
+      <!-- Fingers Wrist-->
+      <Part>
+        <PartID>1005</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title>Tendinitis</Title>
+        <Description>Inflammation of tendon following stress or injury resulting in pain and difficulty with movement</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title>Carpal tunnel syndrome</Title>
+        <Description>It is a type of nerve entrapment at the wrist joint causing pain and difficulty</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title>Thoracic outlet syndrome</Title>
+        <Description>Thoracic outlet syndrome is a group of disorders that occur when the blood vessels or nerves in the thoracic outlet i.e. the space between your collarbone and your first rib become compressed. This can cause numbness in your fingers.</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <ReasonsId>4</ReasonsId>
+        <Title>Cervical radiculopathy</Title>
+        <Description>Pain radiating down the hand following cervical spondylosis</Description>
+        <Image></Image>
+      </Part>
+
+      <!-- Shoulder -->
+      <Part>
+        <PartID>1004</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title>Radiations from cervical spodylosis.</Title>
+        <Description>Cervical spondylosis is a general term for age-related wear and tear affecting the spinal disks in your neck which can radiate into the shoulders</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title>Muscle tendinitis.</Title>
+        <Description>Inflammation of tendon following stress or injury resulting in pain and difficulty with movement</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title>Frozen shoulder</Title>
+        <Description>When there is inflammation in the shoulder joint, there is pain on elevation of the shoulder above the horizontal and eventually restricts motion of the shoulder.</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <ReasonsId>4</ReasonsId>
+        <Title>Carrying heavy or laptop bag</Title>
+        <Description>Pain owning to carrying heavy baggage on the shoulder</Description>
+        <Image></Image>
+      </Part>
+      
+      <!--- Feet -->
+      <Part>
+        <PartID>1006</PartID>
+        <ReasonsId>1</ReasonsId>
+        <Title>Poor posture</Title>
+        <Description>Poor posture is one which puts body at stress resulting in number of muscular skeletal disorders i.e. problems relating to muscles and bones</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <ReasonsId>2</ReasonsId>
+        <Title>Vascular insufficiencies</Title>
+        <Description>It is a slow and progressive blood circulation disorder. It may involve disease in any of the blood vessels outside of the heart and is most common in legs and feet.</Description>
+        <Image></Image>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <ReasonsId>3</ReasonsId>
+        <Title>Flat/Pronated foot</Title>
+        <Description>Pronated feet means that the ankle is rotated outwards, so most of the person’s weight is over the instep of the foot which can cause chronic pain</Description>
+        <Image></Image>
+      </Part>
+    </ReasonsDB>
+    <RemedyDB>
+      
+      <!--  Common problems and precautions -->
+            <Part>
+        <PartID>1001</PartID>
+        <RemedyId>1</RemedyId>
+        <Title></Title>
+        <Description>1. Any exercise mentioned here should not be done in case of acute, severe or traumatic ailments\diseases without any prescription from medical and alied experts</Description>
+      </Part>
+      <Part>
+        <PartID>1001</PartID>
+        <RemedyId>2</RemedyId>
+        <Title></Title>
+        <Description>2. The exercise mentioned in this app should only be done in prescribed manner. Any alteration in manner of performing those exercises may result in activation of different muscle groups, thus may affect the final outcome</Description>
+      </Part>
+        <Part>
+        <PartID>1001</PartID>
+        <RemedyId>3</RemedyId>
+        <Title></Title>
+        <Description>3. The exercises should be performed as per the given dosage. Excessive exercise may result in muscle soleness, however, if any exercise results in severe discomfort, the exercise should be stopped immediately. Any prolongation of severity of symtoms must be consulted for medical help</Description>
+      </Part>
+        <Part>
+        <PartID>1001</PartID>
+        <RemedyId>4</RemedyId>
+        <Title></Title>
+        <Description>4. For beginners or non exercisers, initial exercise dosage is lesser than a normal active adult. Such people should exercise within the limits of pain and should progress slowly and rationally</Description>
+      </Part>
+        <Part>
+        <PartID>1001</PartID>
+        <RemedyId>5</RemedyId>
+        <Title></Title>
+        <Description>5. Any specific precaution mentioned with the exercise should always be kept in mind while doing the exercise. this helps in increasing the effectiveness of exercise or alleviating the associated discomfort.</Description>
+        
+      </Part>
+      <Part>
+        <PartID>1001</PartID>
+        <RemedyId>6</RemedyId>
+        <Title></Title>
+        <Description>6. In case of any doubt please consult the medical professional or certified physio or as required.</Description>
+      </Part>
+          
+      <!-- Neck -->
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>1</RemedyId>
+        <Title>Posture correction</Title>
+        <Description>Helps regain normal neck alignment with simple exercise and modification</Description>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>2</RemedyId>
+        <Title>Muscle stretches</Title>
+        <Description>Helps regain normal muscle length relieving muscular discomfort</Description>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <Title>Conditioning exercises</Title>
+        <Description>Helps in maintaining normal neck mobility</Description>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>4</RemedyId>
+        <Title>Ergonomic advice;Ergonomics</Title>
+        <Description>Helps in improving work environment for comfortable and efficient work</Description>
+      </Part>
+
+      <!-- LowerBAck-->
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>1</RemedyId>
+        <Title>Posture correction</Title>
+        <Description>Helps regain normal back alignment with simple exercise and modification</Description>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>2</RemedyId>
+        <Title>Muscle stretches</Title>
+        <Description>Helps regain normal muscle length relieving muscular discomfort</Description>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <Title>Conditioning exercises</Title>
+        <Description>Helps in maintaining normal back mobility</Description>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>4</RemedyId>
+        <Title>Ergonomic advice;Ergonomics</Title>
+        <Description>Helps in improving work environment for comfortable and efficient work</Description>
+      </Part>
+
+      <!-- Fingers-->
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <Title>Simple exercises</Title>
+        <Description>Simple exercises to regain normal muscle length relieving muscular discomfort</Description>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>2</RemedyId>
+        <Title>Ergonomic advice;Ergonomics</Title>
+        <Description>Helps in improving work environment for comfortable and efficient work</Description>
+      </Part>
+        
+      <!-- Shoulder -->
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <Title>Conditioning exercise</Title>
+        <Description>Helps in maintaining normal shoulder mobility</Description>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>2</RemedyId>
+        <Title>Muscle stretches</Title>
+        <Description>Helps regain normal muscle length relieving muscular discomfort</Description>
+      </Part>
+      
+      <!-- Feet -->
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>1</RemedyId>
+        <Title>Posture correction</Title>
+        <Description>Helps regain normal back alignment with simple exercise and modification</Description>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>2</RemedyId>
+        <Title>Muscle stretches</Title>
+        <Description>Helps regain normal muscle length relieving muscular discomfort</Description>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>3</RemedyId>
+        <Title>Conditioning exercises</Title>
+        <Description>Helps in maintaining normal foot mobility</Description>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>4</RemedyId>
+        <Title>Ergonomic advice;Ergonomics</Title>
+        <Description>Helps in improving work environment for comfortable and efficient work</Description>
+      </Part>
+
+    </RemedyDB>
+    <PostureDB>
+      <!-- Neck -->
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>1</RemedyId>
+        <PostureId>1</PostureId>
+        <Wrong>Forward Head Posture</Wrong>
+        <Wrong_Img>forward head.bmp</Wrong_Img>
+        <Right>Normal Alignment</Right>
+        <Right_Img>normal alignment.bmp</Right_Img>
+        <Description></Description>
+      </Part>
+
+      <!-- Back-->
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>1</RemedyId>
+        <PostureId>1</PostureId>
+        <Wrong>Wrong sitting posture</Wrong>
+        <Wrong_Img>wrong posture.jpg</Wrong_Img>
+        <Right>Correct sitting posture</Right>
+        <Right_Img>correct back posture.png</Right_Img>
+        <Description></Description>
+      </Part>
+      
+      <!-- Feet-->
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>1</RemedyId>
+        <PostureId>1</PostureId>
+        <Wrong>Poor posture 1</Wrong>
+        <Wrong_Img>poor foot posture 1.bmp</Wrong_Img>
+        <Right>Correct posture</Right>
+        <Right_Img>corect foot posture.bmp</Right_Img>
+        <Description></Description>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>1</RemedyId>
+        <PostureId>2</PostureId>
+        <Wrong>Poor posture 2</Wrong>
+        <Wrong_Img>poor foot posture 2.bmp</Wrong_Img>
+        <Right>Correct posture</Right>
+        <Right_Img>corect foot posture.bmp</Right_Img>
+        <Description></Description>
+      </Part>
+    </PostureDB>   
+    <ExcerciseDB>
+
+      <!-- Neck -->
+
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Chin Tuck</Title>
+        <Image>chin tuck.bmp</Image>
+        <Description>Pull your chin, keeping your head and back straight (not tipping your head forward). Hold at the end position for 1-2 seconds and feel the stretch in your neck</Description>
+        <Dosage>Do 3 sets of this exercise with 10 repetitions in each set. There should be a rest interval of 10-15 sec between each set.</Dosage>
+        <Precautions>While doing this exercise shoulders should be relaxed and should not move.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Neck side stretches</Title>
+        <Image>neck side stretch.bmp</Image>
+        <Description>Sit on a chair with your back straight. Bend your neck on right side. With your right hand pull your head more into right side untill you feel the stretch on the left side of your neck. Hold it for 5 sec. Repeat this on other side.</Description>
+        <Dosage>Do 5-10 repetitions in one set. Can be done twice daily.</Dosage>
+        <Precautions>While perforing this exercise make sure you do not bend your back towards the bending neck side. Also, shoulders should be kept at level. Do not overstretch. Always perform exercise within the limits of pain.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Pectoral stretch</Title>
+        <Image>pectoral stretch.bmp</Image>
+        <Description>Stand facing the wall with your feets 2 inch away from the wall. Now place your hand on the wall in a way such that your shoulders form letter T with your body. Now move forward with your shoulder. You should feel stretch on your chest. Hold.</Description>
+        <Dosage>Hold for 5 secs do 5 reps twice daily.</Dosage>
+        <Precautions>Dont move your back while bending forward.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Levator stretch</Title>
+        <Image>levator stretch.bmp</Image>
+        <Description>Sit on a stool and bend your neck such that you are looking into the oppposite shoulder to the side of stretch. Now keep one hand on the head and other between two scapulae. Now press down with the hand on your head. You should feel the stretch on the back of your neck. Hold.</Description>
+        <Dosage> Hold for 5 secs and do 5 reps twice daily.</Dosage>
+        <Precautions>Do not bent you back while performing the stretch.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Neck flexion</Title>
+        <Image>neck flexion.bmp</Image>
+        <Description>Bend the neck forward until you feel the stretch at the back of your neck. Hold it.</Description>
+        <Dosage>One set containing ten repetitions. Needs to be done twice daily</Dosage>
+        <Precautions>Shoulder should remain in neutral position while performing neck movements</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Neck extension</Title>
+        <Image>neck extension.bmp</Image>
+        <Description>Bend your neck backwards as far as it is comfortable. Hold it.</Description>
+        <Dosage>Do 10-15 rep of each exercise twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Neck rotations</Title>
+        <Image>neck rotations.bmp</Image>
+        <Description>Turn your head to one side untill you feel the stretch. Hold it. Repeat it on the other side.</Description>
+        <Dosage>Do 10-15 rep of each exercise twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>4</ExcerciseId>
+        <Title>Side flexion</Title>
+        <Image>side flexion.bmp</Image>
+        <Description>Tilt your head on one shoulder untill you feel the stretch on the opposite side. Hold it. Repeat it on the other side.</Description>
+        <Dosage>Do 10-15 rep of each exercise twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>5</ExcerciseId>
+        <Title>Neck flexor Isometric</Title>
+        <Image>neck flexion isometrics.png</Image>
+        <Description>Place both hands against your forehead. Push your head forward against the heels of your palm without moving your head. Hold.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>6</ExcerciseId>
+        <Title>Neck extension Isometric</Title>
+        <Image>neck extension isometrics.png</Image>
+        <Description>Place both hands behind your neck. Pull your head back against your hands while pulling forward with your hands so that your head does not move.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>8</ExcerciseId>
+        <Title>Neck right side flexion Isometric</Title>
+        <Image>neck right side flex iso.png</Image>
+        <Description>Place your right hand against right side of your head. Push your head hard against the heel of your palm without allowing it to move. Hold.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>9</ExcerciseId>
+        <Title>Neck left side flexion Isometric</Title>
+        <Image>neck left side flexion isometrics.png</Image>
+        <Description>Place your left hand against left side of your head. Push your head hard against the heel of your palm without allowing it to move. Hold.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>10</ExcerciseId>
+        <Title>Neck right side rotation</Title>
+        <Image>neck rotations.bmp</Image>
+        <Description>Place your right hand against your right temple. Try to bring your chin down to your right shoulder without allowing for your head to move. Hold.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>11</ExcerciseId>
+        <Title>Neck left side rotation</Title>
+        <Image>neck rotations.bmp</Image>
+        <Description>Place your left hand against your left temple. Try to bring your chin down to your right shoulder without allowing for your head to move. Hold.</Description>
+        <Dosage>Each position should be held for 5 sec each. Do 5-10 repetition of each exercise twice daily.</Dosage>
+        <Precautions>While doing each exercise make sure neck and head does not move only force is felt. Hold the shoulder in neutral position. Do these exercise twice to thrice daily.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>12</ExcerciseId>
+        <Title>Shoulder retraction</Title>
+        <Image>shoulder retraction.png</Image>
+        <Description>Sit with your back straight. Bend your elbows to 90 degrees. Now try to bring your shoulder blades together.</Description>
+        <Dosage>Hold this position for 10 sec. do 10 repetiotions. Exercise can be done twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+
+      <Part>
+        <PartID>1002</PartID>
+        <RemedyId>4</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Ergonomics</Title>
+        <Image></Image>
+        <Description>1. Keep your computer screen at your eye level. A simple wooden slab may be used to elevate the screen.
+
+2. Dont keep your neck in one position for more than 20-25 mins. Do simple neck movements periodically.
+
+3. Chin tucks need to be practiced every two hours.</Description>
+        <Dosage></Dosage>
+        <Precautions></Precautions>
+      </Part>
+
+      <!-- Back -->
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Back Extension 1</Title>
+        <Image>back extension.png</Image>
+        <Description>Lie down flat on bed with face downward. Keeping your palms by your side take your head, neck and shoulder up as far as possible. While doing this keep your pelvis and legs in contact with the bed. Take your back slowly backwards as far as possible and slowly come down.</Description>
+        <Dosage>Do 3 sets of 10 reps each with gap of 10-15 secs betweeen each set. Ideally it should be done every 2 hours. Minimum it should be done twice daily.</Dosage>
+        <Precautions>Don’t lift your pelvis while doing this exercise. Do this exercise within the limit pain. 
+Note: Initial 2 sets may be painful but you must continue this excersice till third set. This will bring in relaxation. Also, in case of severe pain during this exercise please stop the exercise immediately and take medical assisstance.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Back Extension 2</Title>
+        <Image>back standing 2.png</Image>
+        <Description>Stand straight with your back tall. Keep your hand on your waist. Now, keeping your feet in contact with the ground and without moving your pelvis and leg bend backwards with your waist. Go slowly  as far as possible and then come back to neutral position.</Description>
+        <Dosage>Do 3 sets of 10 reps each with gap of 10-15 secs betweeen each set. Ideally it should be done every 2 hours. Minimum it should be done twice daily.</Dosage>
+        <Precautions>Don’t move your pelvis while doing this exercise. Do this exercise within the limit pain.
+Note: This exercise is ideal for office goers who have prolong sitting hours</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Lumbar flexion</Title>
+        <Image>lumbar flexion.bmp</Image>
+        <Description>Stand tall with your back staright. Now, take your hands above the head stretch your body and slowly bend forward. Try to touch your feet. You may also stop at the point beyond which you find it difficult to move further. Hold.</Description>
+        <Dosage>Each position can be held for 5 sec, minimum 10 rep can be done in a single set. This exercise should be done twice daily.</Dosage>
+        <Precautions>Make sure while doing these exercise your pelvis is in stable postion and not moving. Both the knees should be straight and should not bend at any point while doing these exercises.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Back extension</Title>
+        <Image>lumbar extension.bmp</Image>
+        <Description>Stand tall with your back straight. Keep your hands on your hips. Now try to bend backwards with your back without moving your pelvis and legs. Hold at the end position.</Description>
+        <Dosage>Each position can be held for 5 sec, minimum 10 rep can be done in a single set. This exercise should be done twice daily.</Dosage>
+        <Precautions>Make sure while doing these exercise your pelvis is in stable postion and not moving. Both the knees should be straight and should not bend at any point while doing these exercises.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Lumbar rotations</Title>
+        <Image>lumbar rotation.bmp</Image>
+        <Description>Stand tall with your back straight. Keep your hands on your hips. Now rotate with your back to right and then left. While doing this make sure your pelvis is always facing forward. Hold at each position (both at right and left).</Description>
+        <Dosage>Each position can be held for 5 sec, minimum 10 rep can be done in a single set. This exercise should be done twice daily.</Dosage>
+        <Precautions>Make sure while doing these exercise your pelvis is in stable postion and not moving. Both the knees should be straight and should not bend at any point while doing these exercises.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>4</ExcerciseId>
+        <Title>Lumbar side flexion</Title>
+        <Image>lumbar side flexion.bmp</Image>
+        <Description>Stand tall with your back straight and arms by your side. Now bend on your side gliding your palm on the outer of your leg. Go as far as possible. Try to touch your heel with one palm. Hold. Repeat this on both sides.</Description>
+        <Dosage>Each position can be held for 5 sec, minimum 10 rep can be done in a single set. This exercise should be done twice daily.</Dosage>
+        <Precautions>Make sure while doing these exercise your pelvis is in stable postion and not moving. Both the knees should be straight and should not bend at any point while doing these exercises.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>5</ExcerciseId>
+        <Title>Cat and Camal</Title>
+        <Image>cat camel ex.bmp</Image>
+        <Description>Get down on your hands and knees on the floor. Relax your head, and allow it to drop. Round your back up toward the ceiling until you feel a nice stretch in your upper, middle, and lower back. Hold. Return to the starting position with a flat back while you are on all fours. Let your back sway by pressing your stomach toward the floor. Lift your buttocks toward the ceiling. Hold.</Description>
+        <Dosage>Hold each position for 10-15 seconds. Do 5 repetitions. This can be doe twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>6</ExcerciseId>
+        <Title>Tummy tucks</Title>
+        <Image>TummyTucks.jpg</Image>
+        <Description>Breathe in normally and as you breathe out, gently draw in the lower part of your stomach, pulling up and in with your pelvic floor muscles (in females) at the same time. See your naval is moving up and in. Hold. Don’t move your back at any time. You should be able to breathe and talk while you exercise.</Description>
+        <Dosage>Each hold should be kept for minimum of 5 sec and may extend up to 15 sec, beginner should start with 5 repetions and may go upto 15 repetions. Should be done atleast twice daily.</Dosage>
+        <Precautions>While doing this exercise make sure your back does not move. NEVER HOLD YOUR BREATH while doing this exercise. Always breathe normally. 
+ NOTE: This exercise is of particular help for those with saggy tummy.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>7</ExcerciseId>
+        <Title>SuperMan</Title>
+        <Image>Superman.jpg</Image>
+        <Description>Lie face down on a mat with your arms stretched above your head (like superman) Raise your right arm and left leg about off the ground as far as you comfortably can. Hold. Repeat with the opposite arm and leg.</Description>
+        <Dosage>Hold for 5 sec and do 5-10 repetiotion twice daily.</Dosage>
+        <Precautions>While doing this exercise do not overstretch. Make sure your lifted hand and leg should be in same line for best results.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Hamstring stetch</Title>
+        <Image>hamstring stretch.bmp</Image>
+        <Description>Sit on the floor with yourboth legs forward. Now bend one knee such that the foot touches the other knee. Now stretch your both hands above the shoulders and slowly bend forward. Try to touch the toe of your straightened leg. Hold</Description>
+        <Dosage>Hold for 25-30 secs and do 5 reps twice daily.</Dosage>
+        <Precautions>Do not bent your knee of the straightened leg.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Quadricep stretch</Title>
+        <Image>quads stretch.bmp</Image>
+        <Description>Stand straight and fold your one leg. Hold a table or wall with hand on opposite side. Now with the hand on same side hold the foot of your bent leg and pull it backwards. You should feel the stretch on anterior of your thigh. Hold.</Description>
+        <Dosage>Hold for 25-30 sec and so 5 reps twice daily.</Dosage>
+        <Precautions>Extend your back while doing this exercise</Precautions>
+      </Part>
+
+      <Part>
+        <PartID>1003</PartID>
+        <RemedyId>4</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Ergonomics</Title>
+        <Image></Image>
+        <Description>1. Sit with your back well supported.Do not hyperextend or slouch the back.
+
+2. Use a small pillow or lumbar roll to support your back while sitting.
+
+3. While picking from the floor first come on your knees and then lift the objects.
+
+4. These exercises should also be done before and after an episode of heavy weight lifting. It may help in preventing incidences of disc injury.
+
+5. Make sure your seat should support your thighs properly and your thighs and legs make an angle of 90 degree. Your feet should be properly supported.
+        
+        </Description>
+        <Dosage></Dosage>
+        <Precautions></Precautions>
+      </Part>
+
+      <!-- Wrist -->
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Squeeze tennis ball</Title>
+        <Image>squeeze tennis ball.jpg</Image>
+        <Description>Begin this exercise holding a tennis ball. Squeeze the tennis ball as hard as possible and comfortable without pain.</Description>
+        <Dosage>Hold for 5 seconds and repeat 10 times.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Flexion strengthening</Title>
+        <Image>wrist flexion strengthening.bmp</Image>
+        <Description>Begin this exercise with light weight in your hand, your palm facing up with forearm resting on table. Your elbow should be at your side and bent to 90 degrees. Slowly curl your wrist and fingers up against the resistance. This exercise can be done without weight every half an hour.</Description>
+        <Dosage>Do 10 reps twice daily</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Extension strengthening</Title>
+        <Image>wrist extension ex.bmp</Image>
+        <Description>Begin this exercise with light weight in your hand, your palm facing down with your forearm resting on table. Your elbow should be at your side and bent to 90 degrees. Slowly curl your wrist and fingers up against the resistance. This exercise can be done without weight every half an hour.</Description>
+        <Dosage>Do 10 reps twice dialy.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>4</ExcerciseId>
+        <Title>Flexor stretch</Title>
+        <Image>wrist flexor stretch.bmp</Image>
+        <Description>With arm resting on table and hand hanging off table and elbow straight, slowly grab injured hand and slowly bend wrist up until a stretch is felt and and slowly return to starting position.</Description>
+        <Dosage>Hold for 5 seconds. This can be done twice to thrice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>5</ExcerciseId>
+        <Title>Extensor stretch</Title>
+        <Image>wrist extensor stretch.bmp</Image>
+        <Description>With arm resting on table and hand hanging off the table and elbow straight, slowly grab the injured hand and slowly bend the wrist down until a stretch is felt and slowly return to the starting position.</Description>
+        <Dosage>Hold for 5 seconds twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1005</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Ergonomics</Title>
+        <Image></Image>
+        <Description>1. Make sure while working on computers you wrist and forearm are properly rested on a firm surface.
+          
+2. Avoid excessive extension of wrist for long duration as commonly seen in typing.
+        
+3. Do not hold any vibrating object for long in your hands.
+   
+4. Avoid wearing any tight bangles, bracelets.
+   
+5. Use wrist bands for support while using your wrist to do forceful activities.
+   
+6. While playing racquet sports try use the momentum from shoulder instead of putting the effort through wrist.
+
+        </Description>
+        <Dosage></Dosage>
+        <Precautions></Precautions>
+      </Part>
+
+      <!--Shoulders -->
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Pendulum</Title>
+        <Image>pendulum exercise.bmp</Image>
+        <Description>Permit arm to “dangle” freely. Circular motion in the clockwise and counterclockwise direction is done in ever-increasing large circles. Swing your arm forward and backward. Swing your arm to side to side.</Description>
+        <Dosage>Let your arm freely swing for 5 mins. Can be done twice or thrice daily.</Dosage>
+        <Precautions>Leave your shoulder relaxed while doing this exercise.</Precautions>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Shoulder flexion</Title>
+        <Image>shl flexion.bmp</Image>
+        <Description>Lying on your back with arm at your side, keeping it as close to your body as possible, thumb pointing up, elbow straight, raise arm overhead as far as possible. Return arm to side.</Description>
+        <Dosage>Do 10 reps twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Shoulder abduction</Title>
+        <Image>shdl abductn.bmp</Image>
+        <Description>Lying on your back  with arm at your side, palm up, elbow straight, move entire arm away from your body, sliding along bed in an arc until upper arm touches ear.</Description>
+        <Dosage>10 reps twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>4</ExcerciseId>
+        <Title>Horizontal adduction</Title>
+        <Image>horizontal adduction.bmp</Image>
+        <Description>Lying on your back, hips and knees bent, feet flat on bed  with arm by the side. Move the arm out to the side at shoulder level, then reach for the opposite shoulder, keeping arm as near the face as possible. Return to starting position.</Description>
+        <Dosage>10 reps twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>1</RemedyId>
+        <ExcerciseId>5</ExcerciseId>
+        <Title>Shoulder rotations</Title>
+        <Image>shoulder rotations.bmp</Image>
+        <Description>Lying on your back, hips and knees bent, feet flat on bed. Move the arm out to the side, elbow bent 90°, move hand forward to the bed, palm down. Then move hand back in the opposite direction, palm up, trying to reach bed.</Description>
+        <Dosage>10 reps twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1004</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Pectoral stretch</Title>
+        <Image>pectoral stretch.bmp</Image>
+        <Description>Stand in a doorway with the outsides of your arms pressed against the doorframe. With your elbows bent, lean forward slightly while keeping your arms pressed firmly against the doorframe. You should feel a stretch across your entire chest as you lean forward even more. Hold.</Description>
+        <Dosage>Hold the end position for 30 sec. you can do 5 stretches twice daily.</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      
+      <!-- Feet -->
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>2</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Calf stretch 1</Title>
+        <Image>calf stretch 1.bmp</Image>
+        <Description>Stand facing a wall about 2 feet away from it. Keeping your heels flat and back straight, lean forward and press your hands and forehead to the wall. Make sure your knee does not move forward or your ankle. Do this slowly. You should feel stretch in the muscle in the back of your lower legs, above your heels. For more stretch move your back farther away from the wall, Hold</Description>
+        <Dosage>Hold this position for 30 sec and then relax. 5 reps twice daily</Dosage>
+        <Precautions>Do this exercise slowly and gently</Precautions>
+      </Part>
+      <Part>
+      <PartID>1006</PartID>
+      <RemedyId>2</RemedyId>
+      <ExcerciseId>2</ExcerciseId>
+      <Title>Calf stretch 2</Title>
+      <Image>calf stretch 2.bmp</Image>
+      <Description>Sit on the floor with both legs stretched in front of you. Now bend one knee and using a belt of towel, placed on the ball of the other foot, gently pull towards you with steady, gentle pressure until a stretch is felt in the calf, Hold.</Description>
+      <Dosage>Hold this position for 30 sec and then relax. 5 reps twice daily</Dosage>
+      <Precautions>Do this exercise slowly and gently</Precautions>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Ankle pumps</Title>
+        <Image>ankle pumps.bmp</Image>
+        <Description>Move your ankle towards you and then towards the floor</Description>
+        <Dosage>15-20 times, every 2 hrs</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>2</ExcerciseId>
+        <Title>Heel raise</Title>
+        <Image>heel raise.bmp</Image>
+        <Description>Keep your foot flat on the ground. Now keeping your fore foot in contact with the ground, raise the heel. Bring it down</Description>
+        <Dosage>10 reps every 2 hrs</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>3</ExcerciseId>
+        <Title>Toe point</Title>
+        <Image>toe point.jpg</Image>
+        <Description>Keep your foot flat on the ground. Now raise your heel, forefoot and toes from the ground in such a way so that only tip of toe is touching the ground</Description>
+        <Dosage>10 reps every 2 hrs</Dosage>
+        <Precautions></Precautions>
+      </Part>
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>3</RemedyId>
+        <ExcerciseId>4</ExcerciseId>
+        <Title>Ball rolling</Title>
+        <Image>ball rolling.bmp</Image>
+        <Description>Take a golf ball or a tennis ball under the ball of the foot for 2 mins. This is a great massage for the bottom of the foot and is recommended for people with plantarfascitius(heel pain), archstrain or foot cramps</Description>
+        <Dosage>Can be done every 2 hrs</Dosage>
+        <Precautions></Precautions>
+      </Part>
+
+      <Part>
+        <PartID>1006</PartID>
+        <RemedyId>4</RemedyId>
+        <ExcerciseId>1</ExcerciseId>
+        <Title>Ergonomics</Title>
+        <Image></Image>
+        <Description>1. Make sure while sitting your feet are properly rested on a firm surface.
+          	
+2. Do foot pumping exercise regularly along with the stretches.
+    
+3. Wear comfortable and well aereated shoes. Also, shoes chosen must be in accordance with demand placed on the foot viz. specific for walking or running.
+    
+4. Make sure you leave your foot clean and dry.
+   
+5. In case of flat foot do intrinsic muscle exercise regularly. A shoe wedge may be worn additionally.
+   
+6. In case of plantarfascitis use silicon gel padsunder your heel which will deliver comfort to you.
+   
+7. Do not keep you feet in or out for long while sitting.
+         
+        </Description>
+        <Dosage></Dosage>
+        <Precautions></Precautions>
+      </Part>
+    </ExcerciseDB>
+  </Database>
+</PysioIT>

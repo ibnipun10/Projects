@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="PhoneApp.CommonProblems"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="progressIndicator" IsIndeterminate="true" IsVisible="False" Text="" />
+    </shell:SystemTray.ProgressIndicator>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <phone:Pivot x:Name="Pivot_Causes"  Title="MY APPLICAT" SelectionChanged="Pivot_Causes_SelectionChanged_1">
+           
+            <!--Pivot item one-->
+            <phone:PivotItem x:Name="Reasons" Header="item1">
+                <Grid x:Name="Grid_Problems">
+                    <ScrollViewer>
+                        <StackPanel x:Name="StackPanel_Problems" Grid.Row="0" Margin="12,17,0,28"/>
+                        
+                    </ScrollViewer>
+                    <UI:AdControl x:Name="adcontrol"/>
+                </Grid>
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem x:Name="Remedy" Header="item2">
+                <Grid x:Name="Grid_Remedy">
+                    <ScrollViewer>
+                        <StackPanel x:Name="StackPanel_Remedy" Grid.Row="0" Margin="12,17,0,28"/>
+                    </ScrollViewer>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+        <Canvas HorizontalAlignment="Left" Height="100" Margin="160,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="tapOnTitle" HorizontalAlignment="Left" Margin="10,731,0,0" Text="Tap on the title to know more" VerticalAlignment="Bottom"  Height="auto" Width="470" FontSize="20" Foreground="#FFC9C911" FontWeight="Bold" FontStyle="Italic"/>
+      </Grid>
+
+</phone:PhoneApplicationPage>

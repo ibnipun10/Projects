@@ -1,0 +1,204 @@
+package com.UI.Common;
+
+import java.lang.reflect.Field;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.http.client.protocol.RequestAddCookies;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.facebook.FacebookRequestError;
+import com.facebook.Request;
+import com.facebook.RequestAsyncTask;
+import com.facebook.Response;
+import com.facebook.Session;
+import com.facebook.model.GraphObject;
+
+public class CommonFacebookClass {
+
+	public static boolean bHomeTown;
+	public static Session session;
+	public static List<String> lfriends;
+	public static boolean bHometown;
+	public static LocationClass sLocation;
+	public static FacebookFriend fbFriend;
+
+	public static void GetAllFriends() throws InterruptedException {
+
+		lfriends = new ArrayList<String>();
+		String strRequest = "me/friends";
+		final CountDownLatch countDownLatch = new CountDownLatch(1);
+
+		Request request = new Request(session, strRequest, null, null,
+				new Request.Callback() {
+					public void onCompleted(Response response) {
+						GraphObject graphObject = response.getGraphObject();
+						FacebookRequestError error = response.getError();
+
+						if (graphObject != null) {
+							JSONObject jsonObject = graphObject
+									.getInnerJSONObject();
+							try {
+								JSONArray array = jsonObject
+										.getJSONArray("data");
+								for (int i = 0; i < array.length(); i++) {
+									JSONObject object = (JSONObject) array
+											.get(i);
+									lfriends.add(object.get("id").toString());
+								}
+							} catch (JSONException e) {
+
+								e.printStackTrace();
+							}
+						}
+
+					}
+				});
+
+		//RequestAsyncTask task = new RequestAsyncTask(request);
+		//task.execute();
+		//request.executeAsync();
+		request.executeAndWait();
+		
+		CountDownAwait(countDownLatch);
+
+	}
+
+	public static FacebookFriend GetFriendsDetails(String strId)
+			throws InterruptedException {		
+
+		String strRequest = strId;
+		fbFriend = null;
+		final CountDownLatch countDownLatch = new CountDownLatch(1);
+
+		Request request = new Request(session, strRequest, null, null,
+				new Request.Callback() {
+					public void onCompleted(Response response) {
+						GraphObject graphObject = response.getGraphObject();
+						FacebookRequestError error = response.getError();
+
+						if (graphObject != null) {
+							JSONObject jsonObject = graphObject
+									.getInnerJSONObject();
+							try {
+
+								fbFriend = PopulateFaceBookObject(
+										jsonObject, new FacebookFriend());									
+
+							} catch (Exception e) {
+
+								e.printStackTrace();
+							}
+						}
+
+					}
+				});
+
+		RequestAsyncTask task = new RequestAsyncTask(request);
+		task.execute();
+		CountDownAwait(countDownLatch);
+
+		return fbFriend;
+	}
+
+	public static LocationClass GetLocationDetails(LocationClass location)
+			throws InterruptedException {
+
+		if (location == null)
+			return null;
+
+		String strRequest = location.id;
+		sLocation = location;
+		final CountDownLatch countDownLatch = new CountDownLatch(1);
+
+		Request request = new Request(session, strRequest, null, null,
+				new Request.Callback() {
+					public void onCompleted(Response response) {
+						GraphObject graphObject = response.getGraphObject();
+						FacebookRequestError error = response.getError();
+
+						if (graphObject != null) {
+							JSONObject jsonObject = graphObject
+									.getInnerJSONObject();
+							try {
+
+								JSONObject from = (JSONObject) jsonObject
+										.get("location");
+								if (from != null) {
+									sLocation.lattitude = (float) from
+											.getDouble("latitude");
+									sLocation.longitude = (float) from
+											.getDouble("longitude");
+								}
+
+							} catch (Exception e) {
+
+								e.printStackTrace();
+							} finally {
+								countDownLatch.countDown();
+							}
+						}
+
+					}
+				});
+
+		RequestAsyncTask task = new RequestAsyncTask(request);
+		task.execute();
+		CountDownAwait(countDownLatch);
+
+		return sLocation;
+	}
+
+	private static void CountDownAwait(CountDownLatch countDownLatch)
+			throws InterruptedException {
+		countDownLatch.await(Constants.SECONDS_TO_WAIT, TimeUnit.SECONDS);
+	}
+
+	private static <T> T PopulateFaceBookObject(JSONObject object, T className)
+			throws InstantiationException, IllegalAccessException,
+			IllegalArgumentException, JSONException {
+		T obj = (T) className.getClass().newInstance();
+
+		Field[] fields = obj.getClass().getFields();
+
+		for (int i = 0; i < fields.length; i++) {
+			Field field = fields[i];
+			if (field.getType().equals(LocationClass.class)) {
+				if (bHometown) {
+					if (object.has("hometown")) {
+						JSONObject from = (JSONObject) object.get("hometown");
+						field.set(
+								obj,
+								PopulateFaceBookObject(from,
+										new LocationClass()));
+					}
+				} else {
+					if (object.has("location")) {
+						JSONObject from = (JSONObject) object.get("location");
+						field.set(
+								obj,
+								PopulateFaceBookObject(from,
+										new LocationClass()));
+					}
+				}
+			}
+
+			else if (object.has(field.getName())) {
+				field.set(obj, object.getString(field.getName()));
+			}
+
+		}
+
+		return obj;
+	}
+
+	public static URL GetFacebookPicURL(String id) throws MalformedURLException {
+		return new URL("https://graph.facebook.com/" + id + "/picture");
+	}
+}

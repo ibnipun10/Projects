@@ -1,0 +1,7 @@
+package com.UI.mybuddyapp;
+
+import Fragment;
+
+public class MainFragment extends Fragment {
+
+}

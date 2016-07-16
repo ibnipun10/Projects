@@ -1,0 +1,25 @@
+package com.UI.mybuddyapp;
+
+import com.UI.Common.CommonFacebookClass;
+import com.UI.Common.FacebookFriend;
+
+public class PopulateFriendsThread extends Thread {
+	
+	public void run()
+	{
+		try {
+			CommonFacebookClass.GetAllFriends();
+			
+			for (String id : CommonFacebookClass.lfriends) {
+				FacebookFriend fbfriend =  CommonFacebookClass.GetFriendsDetails(id);
+				CommonFacebookClass.AddToQueue(fbfriend);
+			}
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

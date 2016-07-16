@@ -1,0 +1,9 @@
+package com.UI.Common;
+
+public class Utilities {
+
+	 public static String GetKey(double lattitude, double longitude)
+     {
+         return lattitude + "." + longitude;
+     }
+}

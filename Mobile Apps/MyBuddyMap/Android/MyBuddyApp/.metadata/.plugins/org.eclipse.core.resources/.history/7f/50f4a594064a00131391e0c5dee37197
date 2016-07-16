@@ -1,0 +1,27 @@
+package com.UI.Common;
+
+public class Constants {
+	
+	   public static final int SECONDS_TO_WAIT = 20;
+	   
+	   //Notification Message
+	   public static final String NOTIFICATION_FB_ANALYSE = "Retrieving facebook friends";
+	   public static final String NOTIFICATION_FB_ERROR = "Unable to show your location";	
+	   public static final String PROGRESS_TEXT = "%s out of %s friends mapped"; 
+	   
+	   public static final String DICTIONARY_KEY = "Key";
+	   public static final String MY_LOCATIN_SNIPPET = "My Location";
+	   
+	   public static final String BUDDYLIST_TITLE = "%s friend(s)";
+	   
+	   //Settings Application Data
+	    public static final String SETTINGS_TEXT = "Settings";
+	    public static final String SETTINGS_LOCATION_SERVICE = "LocationService";
+	    public static final String SETTINGS_YES = "1";
+	    public static final String SETTINGS_NO = "0";
+	    public static final String SETTINGS_PRIVACYCONTROL_TITLE = "Privacy Control";
+	    public static final String SETTINGS_LOCATION_PRIVACY_TEXT = "This application uses your current location for mapping services. You may disable this service any time";
+	    public static final String SETTINGS_PRIVACYCONTROL_KEY = "prefCategory";
+	    public static final String SETTINGS_LOCATIONSERVICE_KEY = "prefSwitchLocationService";
+
+}

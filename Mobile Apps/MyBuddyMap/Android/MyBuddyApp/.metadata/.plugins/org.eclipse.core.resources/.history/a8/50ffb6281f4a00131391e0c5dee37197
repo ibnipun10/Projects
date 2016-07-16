@@ -1,0 +1,106 @@
+package com.UI.mybuddyapp;
+
+import java.io.IOException;
+
+import com.UI.Common.CommonFacebookClass;
+import com.UI.Common.Constants;
+import com.facebook.FacebookAuthorizationException;
+import com.facebook.FacebookOperationCanceledException;
+import com.facebook.Session;
+import com.facebook.SessionState;
+import com.facebook.UiLifecycleHelper;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+
+import com.facebook.*;
+import com.facebook.model.GraphObject;
+import com.facebook.model.GraphPlace;
+import com.facebook.model.GraphUser;
+import com.facebook.widget.*;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
+public class MainActivity extends FragmentActivity {
+
+	private UiLifecycleHelper uiHelper;
+	private LoginButton loginButton;
+	private GraphUser user;
+	private MainFragment mainFragment;
+	private Menu mMenu;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		if (savedInstanceState == null) {
+			// Add the fragment on initial activity setup
+			mainFragment = new MainFragment();
+			getSupportFragmentManager().beginTransaction()
+					.add(android.R.id.content, mainFragment).commit();
+		} else {
+			// Or set the fragment from restored state info
+			mainFragment = (MainFragment) getSupportFragmentManager()
+					.findFragmentById(android.R.id.content);
+		}
+		
+		AdView ad = (AdView) findViewById(R.id.adView);
+		ad.loadAd(new AdRequest());
+	}
+
+	protected void onResume() {
+		super.onResume();
+
+		try {
+
+			if (CommonFacebookClass.m_pfthread != null) {
+				if (CommonFacebookClass.m_pfthread.isAlive())
+					CommonFacebookClass.m_pfthread.interrupt();
+			}
+			if (CommonFacebookClass.m_plthread != null) {
+				if (CommonFacebookClass.m_plthread.isAlive())
+					CommonFacebookClass.m_plthread.interrupt();
+			}
+		} catch (Exception ex) {
+
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		mMenu = menu;
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		Intent intent;
+		switch (item.getItemId()) {
+		case R.id.menu_about:
+			intent = new Intent(MainActivity.this, AboutActivity.class);
+			startActivity(intent);
+			break;
+
+		case R.id.menu_settings:
+			intent = new Intent(MainActivity.this, SettingsActivity.class);
+			startActivity(intent);
+			break;
+		}
+		return true;
+	}
+}

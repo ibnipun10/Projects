@@ -1,0 +1,44 @@
+package com.UI.mybuddyapp;
+
+import java.util.List;
+
+import com.UI.Common.FacebookFriend;
+import com.facebook.widget.FriendPickerFragment;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+public class ListAdaptor extends BaseAdapter {
+
+	private List<FacebookFriend> mFBFriend;
+	
+	public ListAdaptor(List<FacebookFriend> lfbFriend) {
+		// TODO Auto-generated constructor stub
+		mFBFriend = lfbFriend;
+	}
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return mFBFriend.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

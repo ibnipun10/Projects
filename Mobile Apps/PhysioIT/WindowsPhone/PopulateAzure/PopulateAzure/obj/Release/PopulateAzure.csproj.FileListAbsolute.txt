@@ -1,0 +1,6 @@
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\PopulateAzure.csprojResolveAssemblyReference.cache
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\App.g.cs
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\MainPage.g.cs
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\PopulateAzure.g.resources
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\PopulateAzure.Resources.AppResources.resources
+C:\Users\nipuna\SkyDrive\Visual Studio Projects\PhoneApp\PopulateAzure\PopulateAzure\obj\Release\PopulateAzure.csproj.GenerateResource.Cache

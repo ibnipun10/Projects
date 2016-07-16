@@ -1,0 +1,17 @@
+package com.UI.Common;
+
+public class Constants {
+	
+	   public static final int SECONDS_TO_WAIT = 20;
+	   
+	   //Notification Message
+	   public static final String NOTIFICATION_FB_ANALYSE = "Retrieving facebook friends";
+	   public static final String NOTIFICATION_FB_ERROR = "Unable to show your location";	
+	   public static final String PROGRESS_TEXT = "%s out of %s friends mapped"; 
+	   
+	   public static final String DICTIONARY_KEY = "Key";
+	   public static final String MY_LOCATIN_SNIPPET = "My Location";
+	   
+	   public static final String BUDDYLIST_TITLE = "%s friends";
+
+}

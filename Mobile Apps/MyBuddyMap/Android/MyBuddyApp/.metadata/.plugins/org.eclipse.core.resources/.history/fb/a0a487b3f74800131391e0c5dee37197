@@ -1,0 +1,63 @@
+package com.UI.mybuddyapp;
+
+import java.util.List;
+
+import com.UI.Common.CommonFacebookClass;
+import com.UI.Common.Constants;
+import com.UI.Common.FacebookFriend;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class BuddylistActivity extends Activity {
+
+	private ListView mlist;
+	private ListAdaptor mListAdaptor;
+	private String key;
+	private TextView mtxtTitle;
+	private TextView mtxtsubTitle;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_buddylist);
+
+		InitializeCompomponents();
+
+	}
+
+	private void InitializeCompomponents() {
+
+		Bundle values = getIntent().getExtras();
+		key = values.getString(Constants.DICTIONARY_KEY);
+
+		// TODO Auto-generated method stub
+		mlist = (ListView) findViewById(R.id.list);
+		List<FacebookFriend> lfbFriend = CommonFacebookClass.dictLocation
+				.get(key);
+		
+		synchronized (lfbFriend) {
+			mListAdaptor = new ListAdaptor(lfbFriend, this);
+			mlist.setAdapter(mListAdaptor);
+		}
+		
+
+		mtxtTitle = (TextView) this.findViewById(R.id.idbuddyListTitle);
+		mtxtsubTitle = (TextView) this.findViewById(R.id.idbuddyListLocation);
+
+		mtxtTitle.setText(String.format(Constants.BUDDYLIST_TITLE, lfbFriend.size()));
+		mtxtsubTitle.setText(lfbFriend.get(0).location.name);
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.buddylist, menu);
+		return true;
+	}
+
+}

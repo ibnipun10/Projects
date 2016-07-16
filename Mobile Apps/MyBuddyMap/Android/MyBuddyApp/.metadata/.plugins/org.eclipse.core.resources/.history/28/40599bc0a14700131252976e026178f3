@@ -1,0 +1,10 @@
+package com.UI.mybuddyapp;
+
+public class PopulateFriendsThread extends Thread {
+	
+	public void run()
+	{
+		
+	}
+
+}

@@ -1,0 +1,43 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SqliteForWP8.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Sqlite Sample WP8 App" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Text="Tasks" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            
+            <TextBox Name="TitleField" Width="200" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,54,0,0"></TextBox>
+            <TextBox Name="TextField" Width="200" Height="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,180,0,339"></TextBox>
+            <Button Name="Insert" Width="200" Height="100" HorizontalAlignment="Left" Margin="246,180,0,339" Content="Insert" Click="Insert_Click_1"></Button>
+            
+            <ListBox Name="TaskListBox" Margin="0,280,0,0"></ListBox>
+            <TextBlock HorizontalAlignment="Left" Margin="24,30,0,0" TextWrapping="Wrap" Text="Title" VerticalAlignment="Top" Width="172"/>
+            <TextBlock HorizontalAlignment="Left" Margin="24,159,0,0" TextWrapping="Wrap" Text="Text" VerticalAlignment="Top" Width="172"/>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

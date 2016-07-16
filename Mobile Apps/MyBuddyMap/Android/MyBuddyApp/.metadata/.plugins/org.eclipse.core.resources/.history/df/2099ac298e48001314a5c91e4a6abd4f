@@ -1,0 +1,86 @@
+package com.UI.mybuddyapp;
+
+import com.UI.Common.CommonFacebookClass;
+import com.UI.Common.Constants;
+import com.UI.Common.FacebookFriend;
+import com.UI.Common.NotificationHelper;
+
+public class PopulateLocationThread extends Thread {
+	
+	private NotificationHelper mNotificationHelper;
+	private MapActivity mMapActivity;
+	private FacebookFriend fbFriend;
+	private int iCount;
+	
+	public PopulateLocationThread(NotificationHelper notificationHelper, MapActivity mapActivity) {
+		// TODO Auto-generated constructor stub
+		mNotificationHelper = notificationHelper;
+		mMapActivity = mapActivity;
+		
+	}
+	public void run()
+	{
+		try
+        {
+            iCount = 0;
+            while (!CommonFacebookClass.bDone)
+            {
+                if (CommonFacebookClass.queueFriends.size() != 0)
+                {
+                    fbFriend = CommonFacebookClass.RemoveItemInQueue();
+
+                    if (fbFriend.location != null)
+                    {
+                        iCount++;
+
+                        fbFriend.location = CommonFacebookClass.GetLocationDetails(fbFriend.location);
+
+                        //Add to dictionary and pin the locations.
+                        if (CommonFacebookClass.InsertIntoLocationDictionary(fbFriend))
+                        {
+                        	
+                        	mMapActivity.runOnUiThread(new Runnable() {
+								
+								@Override
+								public void run() {
+									// TODO Auto-generated method stub
+									mMapActivity.ShowLocation(fbFriend.location.lattitude, fbFriend.location.longitude, fbFriend.location.name);									
+								}
+							});
+                        }
+                           // ShowLocationByThread(fbFriend.location.lattitude, fbFriend.location.longitude);
+
+                        mMapActivity.runOnUiThread(new Runnable() {
+
+							@Override
+							public void run() {
+								// TODO Auto-generated method stub
+								mMapActivity.SetProgressText(String.format(Constants.PROGRESS_TEXT, iCount, CommonFacebookClass.lfriends.size()));
+								
+							}
+                        	
+                        });
+                       // mNotificationHelper.progressUpdate();
+                        
+                    }
+
+                }
+                else
+                {
+                    Thread.sleep(1000);
+                }
+            }
+
+            //SetProgressIndicatorVisibility(false);
+        }
+        catch (Exception ex)
+        {
+            //Set Error Text
+        	int a = 10;
+        }
+		
+		mNotificationHelper.completed();
+	}
+	
+	
+}
