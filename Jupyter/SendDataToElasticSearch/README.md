@@ -1,0 +1,1 @@
+# This wil upload the documents to elasticsearch using bulk
